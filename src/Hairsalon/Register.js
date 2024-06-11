@@ -149,7 +149,7 @@ const Register = () => {
                                         </td>
                                         <td>
                                         <label htmlFor="password">Confirm Password</label><br />
-                                        <input type="password" name="password" value={addState.confrimpassword} id="confirmpassword" placeholder='ReEnter Password' onChange={(e) => handleChange(e)} />
+                                        <input type="password" name="password" value={addState.confrimpassword} id="confrimpassword" placeholder='ReEnter Password' onChange={(e) => handleChange(e)} />
                                     </td>
 
                                     
