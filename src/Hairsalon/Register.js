@@ -128,7 +128,7 @@ const Register = () => {
                                         <label htmlFor="SalonBranch">Salon Branch</label><br />
                                         <select name="salonBranch" id="salonBranch" value={addState.salonBranch} onChange={(e) => handleChange(e)}>
                                                 <option value="" style={{fontSize:'15px',color:'black'}}>Select Salon Branch</option>
-                                                <option value="branch1">Branch 1</option>
+                                                <option value="branch1">Hosue</option>
                                                 <option value="branch2">Branch 2</option>
                                                 <option value="branch3">Branch 3</option>
                                             </select>
