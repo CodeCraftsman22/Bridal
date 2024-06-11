@@ -1,0 +1,482 @@
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(110.5deg, rgba(71, 114, 148, 1) 14.9%, rgba(149, 245, 211, 1) 77.9%);
+    position: relative;
+}
+
+.login>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 90%;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.login>main {
+    height: auto;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 5;
+    background-color: rgba(225, 225, 225, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login>main>h1 {
+    background-color: rgb(59, 218, 159);
+    color: white;
+    padding: 15px;
+    border-radius: 20px 20px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+.login main aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login main aside span {
+    display: flex;
+    align-items: center;
+}
+
+.login main aside div {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(59, 218, 159);
+    display: grid;
+    place-items: center;
+    color: white;
+    border-radius: 2%;
+}
+
+.login>main aside input {
+    height: 50px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid rgb(144, 143, 143);
+    outline: none;
+    border-left-color: rgb(59, 218, 159);
+    padding: 10px;
+    font-size: larger;
+    border-radius: 0 10px 10px 0;
+}
+
+.additional-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.additional-options label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.additional-options .forgot-password {
+    font-size: 14px;
+    color: rgb(59, 218, 159);
+    text-decoration: none;
+}
+
+.additional-options .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login>main section {
+    margin-bottom: 20px;
+}
+
+.login>main section>button {
+    height: 40px;
+    width: 60%;
+    background-color: rgb(59, 218, 159);
+    color: white;
+    display: grid;
+    justify-items: center;
+    margin-right: 30px;
+    font-size: x-large;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    right: -0.5px;
+    left: 19%;
+    transition: background-color 0.3s ease;
+}
+
+.login>main section>button:hover {
+    cursor: pointer;
+    background-color: rgb(50, 180, 130);
+}
+
+.login>main h2 {
+    font-size: 17px;
+    color: #757474;
+    margin-bottom: 20px;
+}
+
+.login>main>footer {
+    display: grid;
+    place-items: center;
+}
+
+.login>main>footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.login>main>footer>div>span {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.login>main>footer>div>span:nth-child(1) {
+    background: #4267B2;
+}
+
+.login>main>footer>div>span:nth-child(2) {
+    background-color: rgb(189, 39, 39);
+}
+
+.login>main>footer>div>span:nth-child(3) {
+    background-color: #1D9BF0;
+}
+
+.login>main>footer>div>span>a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*small Screen and Tab */
+
+@media (max-width: 767px)  and (max-width: 1024px){
+    .login>main>h1 {
+
+        padding: 15px;
+        border-radius: 20px 20px 0 0;
+
+    }
+
+    .login main aside input {
+        width: 100%;
+    }
+
+    .login>main section>button {
+        width: 60%;
+    }
+}
+
+
+
+.form {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(106, 178, 155);
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(110.5deg, rgba(71, 114, 148, 1) 14.9%, rgba(149, 245, 211, 1) 77.9%);
+}
+
+.form>div {
+    height: auto;
+    width: 90%;
+    max-width: 1200px;
+    background-image: linear-gradient(109.6deg, rgba(24, 138, 141, 1) 11.2%, rgba(96, 221, 142, 1) 91.1%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form>div>aside:nth-child(1) span img {
+    margin-top: 20px;
+    height: auto;
+    width: 100%;
+    max-width: 350px;
+    background-color: #7dd5d5;
+    border-radius: 20px;
+}
+
+.form>div>aside:nth-child(2) {
+    height: auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(244, 238, 238, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.form>div>aside:nth-child(1) span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+}
+
+.form1>h1 {
+    height: auto;
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.form1>h1>span {
+    display: block;
+    height: 30px;
+    width: 200px;
+    display: grid;
+    place-items: center;
+    background-color: rgb(35, 153, 110);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.form1 div {
+    height: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.form1 table {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form1 table td {
+    width: 50%;
+    padding: 10px;
+}
+
+.form1 table input,
+.form1 table select {
+    height: 40px;
+    width: 100%;
+    max-width: 270px;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #6d6c6b;
+    font-size: large;
+}
+
+.form1 table input::placeholder {
+    font-size: 15px;
+    color: black;
+}
+
+.form1 button {
+    height: 40px;
+    width: 100%;
+    max-width: 230px;
+    font-size: 27px;
+    opacity: 0.9;
+    justify-items: center;
+    font-weight: bolder;
+    background-color: rgb(2, 85, 59);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.form1 button:hover {
+    cursor: pointer;
+    background-color: rgba(3, 59, 41, 0.5);
+    font-size: 26.5px;
+    opacity: 1;
+}
+
+.form1 h3 {
+    height: 25px;
+    width: 50%;
+}
+
+.form1 label {
+    font-weight: bolder;
+    color: rgb(3, 67, 47);
+}
+
+/* Mobile screens */
+@media (max-width: 412px) {
+    .form>div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form>div>aside:nth-child(1) span img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .form>div>aside:nth-child(2) {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form1>h1 {
+        justify-content: center;
+    }
+
+    .form1>h1>span {
+        margin-right: 0;
+    }
+
+    .form1 table {
+        display: block;
+    }
+
+    .form1 table td {
+        width: 100%;
+        padding: 5px 0;
+        display: block;
+    }
+
+    .form1 table input,
+    .form1 table select {
+        width: 100%;
+        max-width: none;
+    }
+
+    .form1 button {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+}
+
+/* Smaller screens */
+@media (min-width: 360px) and (max-width: 800px) and(max-width:390px) and (max-width:844px){
+    .form>div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form>div>aside:nth-child(1) span img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .form>div>aside:nth-child(2) {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form1>h1 {
+        justify-content: center;
+    }
+
+    .form1>h1>span {
+        margin-right: 0;
+    }
+
+    .form1 table td {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .form1 table input,
+    .form1 table select {
+        width: 100%;
+    }
+
+    .form1 button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form>div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form>div>aside:nth-child(1) span img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form>div>aside:nth-child(2) {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form1>h1 {
+        justify-content: center;
+    }
+
+    .form1>h1>span {
+        margin-right: 0;
+    }
+
+    .form1 table td {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .form1 table input,
+    .form1 table select {
+        width: 100%;
+    }
+
+    .form1 button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
+
+
