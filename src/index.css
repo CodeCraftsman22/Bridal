@@ -255,13 +255,25 @@ html {
     color: white;
 }
 
+.form1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(244, 238, 238, 0.7);
+    border-radius: 20px;
+}
 .form1>h1 {
     height: auto;
     width: 100%;
     text-align: right;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -270,6 +282,7 @@ html {
     height: 30px;
     width: 200px;
     display: grid;
+    
     place-items: center;
     background-color: rgb(35, 153, 110);
     color: white;
@@ -277,9 +290,11 @@ html {
     letter-spacing: 1.5px;
 }
 
+
+
 .form1 div {
     height: auto;
-    width: 100%;
+    width: 70%;
     display: grid;
     place-items: center;
 }
@@ -294,6 +309,12 @@ html {
     padding: 10px;
 }
 
+.form1 table select {
+    width: 100%;
+    max-width: 200px; /* Limit the width of the select box */
+    font-size: 12px;
+}
+
 .form1 table input,
 .form1 table select {
     height: 40px;
@@ -302,8 +323,13 @@ html {
     outline: none;
     border-radius: 5px;
     padding: 10px;
+    font-size: 12px;
     border: 1px solid #6d6c6b;
     font-size: large;
+}
+.form1 table select option {
+    font-size: 12px; /* Reduce font size for options */
+    padding: 5px;
 }
 
 .form1 table input::placeholder {
