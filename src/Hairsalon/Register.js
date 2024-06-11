@@ -43,7 +43,7 @@ const Register = () => {
             pincode: addState.pincode,
             confrimpassword:addState.confrimpassword
         };
-        axios.post('http://localhost:8097/Register', reqBody)
+        axios.post('http://localhost:8083/register', reqBody)
             .then((response) => {
                 if (response.data) {
 
