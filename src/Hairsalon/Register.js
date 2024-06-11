@@ -9,15 +9,14 @@ const Register = () => {
 
     const initilState = {
         username: "",
-        fullName: "",
+
         email: "",
-        phoneNumber: "",
+        
         password: "",
-        salonName: "",
+       
         salonBranch: "",
-        salonCity: "",
-        pincode: "",
-        confrimpassword:"",
+       
+        
         isDelete: false
     }
     const [addState, setAddState] = useState(initilState)
@@ -33,15 +32,15 @@ const Register = () => {
         e.preventDefault();
         const reqBody = {
             username: addState.username,
-            fullName: addState.fullName,
+            
             email: addState.email,
-            phoneNumber: addState.phoneNumber,
+           
             password: addState.password,
-            salonName: addState.salonName,
+           
             salonBranch: addState.salonBranch,
-            salonCity: addState.salonCity,
-            pincode: addState.pincode,
-            confrimpassword:addState.confrimpassword
+         
+           
+           
         };
         axios.post('http://localhost:8083/register', reqBody)
             .then((response) => {
@@ -87,69 +86,52 @@ const Register = () => {
                                         <input type="text" name="username" id="username" placeholder='Enter Your Username' value={addState.username}
                                             onChange={(e) => handleChange(e)} />
                                     </td>
-                                    <td>
-                                        <label htmlFor="password">Password</label><br />
-                                        <input type="password" name="password" value={addState.password} id="password" placeholder='Enter Your Password' onChange={(e) => handleChange(e)} />
-                                    </td>
+                                  
                                     
 
                                     
                                 </tr>
                                 <tr>
                                 <td>
-                                        <label htmlFor="FullName">FullName</label><br />
-                                        <input type='text' name="fullName" id="fullName" placeholder='Enter Your Full Name' value={addState.fullName}
-                                            onChange={(e) => handleChange(e)} />
+                                <label htmlFor="password">Password</label><br />
+                                <input type="password" name="password" value={addState.password} id="password" placeholder='Enter Your Password' onChange={(e) => handleChange(e)} />
                                     </td>
-                                    <td>
-                                        <label htmlFor="phone">Phone Number</label><br />
-                                        <input type='text' name="phoneNumber" id="phoneNumber" placeholder='Enter Your Phone Number' maxLength={'10'} value={addState.phoneNumber}
-                                            onChange={(e) => handleChange(e)} />
-                                    </td>
+                                   
                                 </tr>
 
                                 <tr>
                                     <td>
-                                        <label htmlFor="email">Email</label><br />
+                                       
+                                             <label htmlFor="password">Confirm Password</label><br />
+                                             <input type="password" name="password"  id="confirmpassword" placeholder='ReEnter Password'  />
+                                    </td>
+                                   
+                                </tr>
+
+
+
+                                <tr>
+                                    <td>
+                                    <label htmlFor="email">Email</label><br />
                                         <input type="text" name="email" id="email" placeholder='Enter Your E-mail' value={addState.email}
                                             onChange={(e) => handleChange(e)} />
+                                        
                                     </td>
-                                    <td>
-                                        <label htmlFor="SalonName">Salon Name</label><br />
-                                        <input type="text" name="salonName" id="salonName" placeholder='Enter Your Salon Name'  value={addState.salonName}
-                                            onChange={(e) => handleChange(e)} />
-                                    </td>
+                                    
                                 </tr>
 
 
 
                                 <tr>
-                                    <td>
+                                    
+                                        <td>
                                         <label htmlFor="SalonBranch">Salon Branch</label><br />
                                         <select name="salonBranch" id="salonBranch" value={addState.salonBranch} onChange={(e) => handleChange(e)}>
                                                 <option value="" style={{fontSize:'15px',color:'black'}}>Select Salon Branch</option>
-                                                <option value="branch1">Hosue</option>
-                                                <option value="branch2">Branch 2</option>
-                                                <option value="branch3">Branch 3</option>
+                                                <option value="branch1">Naturallook Bridal Studio - JPS Tower, Thally Main Road, near Vailankanni School, Hosur, Tamil Nadu 635109.</option>
+                                                <option value="branch2">Naturallook Family Salon & Bridal Studio - VKP Towers, Denkanikotta Rd, opp. DSP Office, Hosur, Tamil Nadu 635109</option>
+                                                <option value="branch3">Naturallook Family Salon & Bridal Studio - PRWM+HHG, Bagalur Rd, opp. Nggo's Busstop, Hosur, Avalapalli Hudco, Tamil Nadu 635109</option>
                                             </select>
-                                    </td>
-                                    <td>
-                                        <label htmlFor="SalonCity">Salon City</label><br />
-                                        <input type="text" name="salonCity" value={addState.salonCity} id="salonCity" placeholder='Enter Salon City' onChange={(e) => handleChange(e)} />
-                                    </td>
-                                </tr>
-
-
-
-                                <tr>
-                                    <td>
-                                        <label htmlFor="Pincode">Pincode </label><br />
-                                        <span id='sp'></span>
-                                        <input type="Pincode" name="pincode" value={addState.pincode} id="pincode" placeholder='Enter PinCode' onChange={(e) => handleChange(e)} />
-                                        </td>
-                                        <td>
-                                        <label htmlFor="password">Confirm Password</label><br />
-                                        <input type="password" name="password" value={addState.confrimpassword} id="confrimpassword" placeholder='ReEnter Password' onChange={(e) => handleChange(e)} />
                                     </td>
 
                                     
