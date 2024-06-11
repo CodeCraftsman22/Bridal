@@ -16,7 +16,7 @@ const Login = () => {
     };
 
     axios
-      .post("http://localhost:8097/user/login", loginPayload)
+      .post("http://localhost:8083/login", loginPayload)
       .then((res) => {
         if (res.data.status === true) {
           nav("/home");
