@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const nav = useNavigate();
@@ -11,7 +11,7 @@ const Login = () => {
   const loginSubmit = (e) => {
     e.preventDefault();
     let loginPayload = {
-      userName: userName,
+      username: username,
       password: password,
     };
 
@@ -45,8 +45,8 @@ const Login = () => {
                 <input
                   type="text"
                   placeholder="UserName or Email"
-                  name="userName"
-                  value={userName}
+                  name="username"
+                  value={username}
                   onChange={(e) => {
                     setUserName(e.target.value);
                   }}
@@ -80,7 +80,7 @@ const Login = () => {
               </a>
             </div>
             <section>
-              <button type="submit">SIGN IN</button>
+              <button type="submit" onClick={(e)=>loginSubmit(e)}>SIGN IN</button>
             </section>
           </form>
           <h2>Or Login Using? <a href="./register" style={{ color: 'rgb(59, 218, 159)' }}>SignUp</a></h2>
